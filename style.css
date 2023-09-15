@@ -1,0 +1,362 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+h1,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #646464;
+    font-family: Arial, sans-serif;
+    padding-top: 90px;
+}
+
+header {
+    background-color: #181818;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Ensure it's on top of other elements */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+#profile {
+    background-image: url('img/Bg.jpg');
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-info {
+    text-align: left;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.header {
+    font-size: 32px;
+    margin-bottom: 10px;
+    transition: font-size 0.3s, color 0.3s, letter-spacing 0.3s;
+    display: inline;
+    color: white;
+}
+
+.header:hover {
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-shadow: 2px 3px 8px #333;
+    letter-spacing: 5px;
+    cursor: default;
+}
+
+.par {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: justify;
+    color: rgb(236, 236, 236);
+}
+
+.profilepic {
+    max-width: 20%;
+    border-radius: 50%;
+    margin-left: 20px;
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: 2px 3px 8px rgb(235, 235, 235);
+    transition: 0.3s;
+    animation: fadeIn 5s;
+}
+
+.profilepic:hover {
+    transform: rotate(2deg) scale(1.1);
+}
+
+#education {
+    display: flex;
+    text-align: center;
+    padding: 50px 0 40px 0;
+    background-color: #1f1f1f;
+    margin-top: 10px;
+    box-shadow: 5px 10px 20px 10px rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+}
+
+.edu-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 75%;
+    gap: 50px;
+}
+
+.edu-title {
+    color: white;
+    grid-column: 1 / span 2;
+    letter-spacing: 10px;
+}
+
+.edu {
+    background-color: #ccc;
+    max-width: 100%;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 3s ease, transform 3s ease;
+}
+
+.edu-h1 {
+    text-shadow: 1px 1px 8px rgb(121, 120, 120);
+    text-transform: uppercase;
+    font-size: 28px;
+    font-style: oblique;
+}
+
+.edu-h2 {
+    color: #131313ad;
+    text-shadow: 1px 1px 8px rgb(165, 165, 165);
+}
+
+#experience {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 43px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(100, 100, 100, 1) 100%);
+}
+
+#wave {
+    width: 1902px;
+    height: auto;
+}
+
+.exp-container {
+    position: absolute;
+    top: 10%;
+    color: white;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+
+.exp-element {
+    width: 50%;
+}
+
+.exp-h1 {
+    display: inline-block;
+    margin: 20px 0;
+}
+
+.exp-p {
+    margin-right: 40px;
+}
+
+.exp-cards {
+    margin-left: 20px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#cards {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    width: 350px;
+    height: 400px;
+    border: 2px solid #ffffff;
+    background-color: #646464;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 2px 2px 15px 2px#fff;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: fadeInCards 0.5s ease-in-out;
+}
+
+.htmlcssjs {
+    display: inline;
+    position: absolute;
+    scale: .7;
+    margin-bottom: 260px;
+    width: 100%;
+    height: auto;
+}
+
+.java {
+    display: inline;
+    position: absolute;
+    scale: .42;
+    margin-bottom: 260px;
+    margin-right: 120px;
+    width: 100%;
+    height: auto;
+    mix-blend-mode: hard-light;
+}
+
+.netbeans {
+    display: inline;
+    position: absolute;
+    scale: .24;
+    margin-bottom: 260px;
+    margin-left: 150px;
+    width: 100%;
+    height: auto;
+}
+
+.csharp {
+    display: inline;
+    position: absolute;
+    scale: .23;
+    margin-bottom: 260px;
+    margin-right: 200px;
+    width: 100%;
+    height: auto;
+
+}
+
+.unity {
+    display: inline;
+    position: absolute;
+    scale: .55;
+    margin-bottom: 260px;
+    margin-left: 110px;
+    width: 100%;
+    height: auto;
+
+}
+
+.card1-p,
+.card2-p,
+.card3-p {
+    text-align: justify;
+    margin: 0 15px;
+}
+
+.exp-cards-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 225px;
+}
+
+.exp-cards-button {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 380px;
+    margin: auto;
+}
+
+#contact {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 90px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* buttons */
+button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInCards {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #cards {
+        width: 50%;
+        height: 80;
+        font-size: 80%;
+        margin-left: 20px;
+
+    }
+
+    .exp-cards-button-container {
+        margin-top: 235px;
+        margin-left: 20px;
+    }
+
+    .exp-cards-button {
+        gap: 320px;
+    }
+
+    .csharp{
+        margin-right: 150px;
+    }
+
+    .unity{
+        margin-left: 90px;
+    }
+}
