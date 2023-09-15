@@ -13,6 +13,7 @@ body {
     background-color: #646464;
     font-family: Arial, sans-serif;
     padding-top: 90px;
+    overflow-x: hidden; /* Add this line */
 }
 
 header {
@@ -156,13 +157,9 @@ nav a {
     justify-content: center;
     align-items: center;
     margin-top: 43px;
+    height: 600px;
     background: rgb(0, 0, 0);
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(100, 100, 100, 1) 100%);
-}
-
-#wave {
-    width: 1902px;
-    height: auto;
 }
 
 .exp-container {
