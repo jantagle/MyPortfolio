@@ -13,7 +13,8 @@ body {
     background-color: #646464;
     font-family: Arial, sans-serif;
     padding-top: 90px;
-    overflow-x: hidden; /* Add this line */
+    overflow-x: hidden;
+    /* Add this line */
 }
 
 header {
@@ -37,7 +38,7 @@ nav ul {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 10px;
     font-weight: bold;
 }
 
@@ -56,7 +57,7 @@ nav a {
 
 .profile-info {
     text-align: left;
-    max-width: 50%;
+    max-width: 100%;
     padding: 20px;
 }
 
@@ -89,6 +90,17 @@ nav a {
 .profilepic {
     max-width: 20%;
     border-radius: 50%;
+    margin: auto 20px;
+    border: 1px solid rgb(231, 231, 231);
+    box-shadow: 2px 3px 8px rgb(235, 235, 235);
+    transition: 0.3s;
+    animation: fadeIn 5s;
+}
+
+.profilepic1 {
+    display: none;
+    max-width: 20%;
+    border-radius: 50%;
     margin-left: 20px;
     border: 1px solid rgb(231, 231, 231);
     box-shadow: 2px 3px 8px rgb(235, 235, 235);
@@ -97,6 +109,10 @@ nav a {
 }
 
 .profilepic:hover {
+    transform: rotate(2deg) scale(1.1);
+}
+
+.profilepic1:hover {
     transform: rotate(2deg) scale(1.1);
 }
 
@@ -116,6 +132,8 @@ nav a {
     grid-template-columns: 1fr 1fr;
     width: 75%;
     gap: 50px;
+    justify-content: center;
+
 }
 
 .edu-title {
@@ -332,12 +350,12 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+
     #cards {
         width: 50%;
         height: 80;
         font-size: 80%;
         margin-left: 20px;
-
     }
 
     .exp-cards-button-container {
@@ -349,11 +367,162 @@ footer {
         gap: 320px;
     }
 
-    .csharp{
+    .csharp {
         margin-right: 150px;
     }
 
-    .unity{
+    .unity {
         margin-left: 90px;
     }
 }
+
+@media screen and (max-width: 600px) {
+
+    #profile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-info {
+        right: auto;
+        margin: auto;
+        align-items: center;
+        width: 80%;
+        margin-top: 70px;
+    }
+
+    .header {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .par {
+        width: 100%;
+        margin: auto;
+    }
+
+    .profilepic {
+        display: none;
+    }
+
+    .profilepic1 {
+        margin-top: 60px;
+        display: block;
+        transform: scale(2);
+    }
+
+    .profilepic1:hover {
+        transform: rotate(1.2deg) scale(2.3);
+    }
+
+    .edu-title {
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+
+    .edu-container {
+        display: inline;
+    }
+
+    .edu {
+        margin: 10px 0;
+    }
+
+    .exp-cards-button {
+        gap: 200px;
+    }
+
+    .exp-container {
+        display: inline;
+        margin-top: -50px;
+    }
+
+    .exp-p {
+        width: 100%;
+    }
+
+    #experience {
+        height: 750px;
+    }
+
+    .exp-element {
+        width: 100%;
+    }
+
+    .exp-cards {
+        position: relative;
+        width: 100%;
+        margin-left: -10px;
+        display: flex;
+    }
+
+    .cards {
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+    }
+
+    #cards {
+        width: 80%;
+        height: 80;
+        font-size: 80%;
+        margin-left: 20px;
+    }
+
+    .java {
+        margin-left: -30px;
+    }
+
+    .netbeans {
+        margin-right: -30px;
+    }
+
+    .csharp {
+        margin-left: -40px;
+    }
+
+    .unity {
+        margin-right: -30px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .exp-cards-button{
+        gap:230px;
+    }
+
+    .java {
+        margin-left: 20px;
+    }
+
+    .netbeans {
+        margin-right: 30px;
+    }
+
+    .csharp {
+        margin-left: 20px;
+    }
+
+    .unity {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .profilepic1 {
+        transform: scale(3);
+    }
+
+    .profilepic1:hover {
+        transform: rotate(1.2deg) scale(3.2);
+    }
+
+    .exp-cards-button{
+        gap:200px;
+    }
+}
+
