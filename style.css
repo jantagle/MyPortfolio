@@ -237,49 +237,57 @@ nav a {
     position: absolute;
     scale: .7;
     margin-bottom: 260px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .java {
-    display: inline;
+    display: flex;
     position: absolute;
-    scale: .42;
+    scale: 1;
     margin-bottom: 260px;
-    margin-right: 120px;
     width: 100%;
-    height: auto;
-    mix-blend-mode: hard-light;
+    align-content: center;
+    align-items: center;
+}
+
+.javas {
+    margin: -70px;
+    scale: .35;
+    max-width: 100%;
+    height: 100%;
 }
 
 .netbeans {
-    display: inline;
-    position: absolute;
+    margin: -120px;
     scale: .24;
-    margin-bottom: 260px;
-    margin-left: 150px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
 .csharp {
-    display: inline;
+    display: flex;
+    justify-content: space-between;
     position: absolute;
-    scale: .23;
+    scale: 1;
     margin-bottom: 260px;
-    margin-right: 200px;
     width: 100%;
-    height: auto;
+    align-content: center;
+    align-items: center;
+}
+
+.csharps {
+    margin: -70px;
+    scale: .23;
+    max-width: 100%;
+    height: 100%;
 
 }
 
 .unity {
-    display: inline;
-    position: absolute;
+    margin: -60px;
     scale: .55;
-    margin-bottom: 260px;
-    margin-left: 110px;
-    width: 100%;
+    max-width: 100%;
     height: auto;
 
 }
@@ -291,22 +299,6 @@ nav a {
     margin: 0 15px;
 }
 
-.exp-cards-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 225px;
-}
-
-.exp-cards-button {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 380px;
-    margin: auto;
-}
-
 #contact {
     text-align: center;
     padding: 40px 0;
@@ -316,10 +308,23 @@ nav a {
 }
 
 /* buttons */
-button {
+#btnl {
+    position: absolute;
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    top: 170px;
+    margin-left: -420px;
+
+}
+
+#btnr {
+    position: absolute;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    top: 170px;
+    margin-right: -420px;
 }
 
 footer {
@@ -351,11 +356,33 @@ footer {
 
 @media screen and (max-width: 768px) {
 
+    .java {
+        justify-content: space-between;
+        max-width: 100%;
+    }
+
+    .javas {
+        margin-left: -40px;
+    }
+
+    .netbeans {
+        margin-right: -50px;
+    }
+
+    .csharps {
+        margin-left: -80px;
+    }
+
+    .unity {
+        margin-right: -50px;
+    }
+
     #cards {
         width: 50%;
         height: 80;
         font-size: 80%;
         margin-left: 20px;
+        margin-top: 40px;
     }
 
     .exp-cards-button-container {
@@ -367,12 +394,66 @@ footer {
         gap: 320px;
     }
 
-    .csharp {
-        margin-right: 150px;
+    #btnl {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 200px;
+        margin-left: -320px;
     }
 
-    .unity {
-        margin-left: 90px;
+    #btnr {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 200px;
+        margin-right: -360px;
+    }
+}
+
+@media screen and (max-width: 710px) {
+    #btnl {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 170px;
+        top: 200px;
+        margin-left: -290px;
+    }
+
+    #btnr {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 170px;
+        top: 200px;
+        margin-right: -330px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    #btnl {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 170px;
+        top: 200px;
+        margin-left: -270px;
+    }
+
+    #btnr {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 170px;
+        top: 200px;
+        margin-right: -310px;
     }
 }
 
@@ -471,43 +552,68 @@ footer {
         margin-left: 20px;
     }
 
-    .java {
-        margin-left: -30px;
+
+    .javas {
+        margin-left: -50px;
     }
 
-    .netbeans {
-        margin-right: -30px;
+    #btnl {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 200px;
+        left: 0%;
+        margin: 0;
     }
 
-    .csharp {
-        margin-left: -40px;
-    }
-
-    .unity {
-        margin-right: -30px;
+    #btnr {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 200px;
+        right: -5%;
+        margin: 0;
     }
 }
 
 @media screen and (max-width: 375px) {
 
-    .exp-cards-button{
-        gap:230px;
+    .exp-cards-button {
+        gap: 230px;
     }
 
-    .java {
-        margin-left: 20px;
+    .javas {
+        margin-left: -35px;
     }
 
-    .netbeans {
-        margin-right: 30px;
-    }
-
-    .csharp {
-        margin-left: 20px;
+    .csharps {
+        margin-left: -55px;
     }
 
     .unity {
-        margin-right: 20px;
+        margin-right: -35px;
+    }
+
+    #btnl {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 200px;
+        left: -5%;
+        margin: 0;
+    }
+
+    #btnr {
+        position: absolute;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 200px;
+        right: -12%;
+        margin: 0;
     }
 }
 
@@ -521,8 +627,23 @@ footer {
         transform: rotate(1.2deg) scale(3.2);
     }
 
-    .exp-cards-button{
-        gap:200px;
+    .exp-cards-button {
+        gap: 200px;
+    }
+
+    .javas {
+        margin-left: -35px;
+    }
+
+    .netbeans {
+        margin-right: -40px;
+    }
+
+    .csharps {
+        margin-left: -45px;
+    }
+
+    .unity {
+        margin-right: -30px;
     }
 }
-
