@@ -30,22 +30,70 @@ header {
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mylogo {
+    font-size: 24px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.mylogo2 {
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    font-size: larger;
+}
+
+.navs {
+    margin: auto;
 }
 
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
     font-weight: bold;
+}
+
+.burgernav {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    margin-top: 19px;
+    z-index: 1;
+    border-radius: 0 0 50px 50px;
+}
+
+
+.mobile-nav.open {
+    animation: slideleft 0.3s ease-in-out forwards;
+}
+
+.mobile-nav.close {
+    animation: slideright 0.3s ease-in-out forwards;
+}
+
+.mobile-nav a {
+    padding: 10px;
+    text-align: center;
 }
 
 #profile {
     background-image: url('img/Bg.jpg');
     text-align: center;
     padding: 40px 0;
+    margin-top: -20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +101,7 @@ nav a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    animation: slideleft 0.3s ease-in-out forwards;
 }
 
 .profile-info {
@@ -166,6 +215,11 @@ nav a {
     text-shadow: 1px 1px 8px rgb(165, 165, 165);
 }
 
+.edu p {
+    text-align: justify;
+    text-indent: 30px;
+}
+
 #experience {
     position: relative;
     width: 100%;
@@ -230,6 +284,7 @@ nav a {
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     animation: fadeInCards 0.5s ease-in-out;
+    text-indent: 30px;
 }
 
 .htmlcssjs {
@@ -299,12 +354,8 @@ nav a {
     margin: 0 15px;
 }
 
-#contact {
-    text-align: center;
-    padding: 40px 0;
-    margin-top: 90px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.card2-p{
+    margin-top: 80px;
 }
 
 /* buttons */
@@ -325,6 +376,119 @@ nav a {
     height: 40px;
     top: 170px;
     margin-right: -420px;
+}
+
+#contact {
+    width: 100%;
+    padding: 40px 0 60px 0;
+    margin-top: 10px;
+    background: rgb(80, 80, 80);
+    background: linear-gradient(0deg, rgba(80, 80, 80, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    box-shadow: 0px -3px 15px 5px rgb(2, 2, 2);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.contact-header {
+    margin: auto;
+    width: 200px;
+    color: white;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 50%;
+    margin: auto;
+    border: 2px solid rgb(31, 31, 31);
+    border-radius: 50px;
+    box-shadow: 2px 2px 20px 3px white;
+}
+
+.contact-img {
+    display: inline-block;
+    color: white;
+    justify-content: center;
+    background-color: #646464;
+    border-radius: 50px 0 0 50px;
+}
+
+.contact-img p {
+    text-align: justify;
+    text-indent: 30px;
+    margin: 20px;
+}
+
+.contact-img2 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact-img2 i:hover {
+    transform: rotate(10deg);
+}
+
+
+.contact-img2 i {
+    scale: 2;
+    margin: 10px;
+    padding: 1px 2px;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: rgb(56, 56, 56);
+}
+
+.contact-message {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    width: 100%;
+    border-radius: 0 50px 50px 0;
+}
+
+.contact-message-container {
+    text-align: justify;
+    width: 90%;
+    margin: auto;
+
+}
+
+.email {
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin: auto;
+}
+
+.message {
+    display: flex;
+    width: 90%;
+    height: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    margin: auto;
+}
+
+#submit {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    border: 1px solid #000000;
+    background-color: grey;
+    color: #fff;
 }
 
 footer {
@@ -351,6 +515,30 @@ footer {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes slideleft {
+    from {
+        left: 100%;
+        /* Start off-screen to the left */
+    }
+
+    to {
+        left: 0;
+        /* Slide in to left edge of the screen */
+    }
+}
+
+@keyframes slideright {
+    from {
+        left: 0;
+        /* Start at left edge of the screen */
+    }
+
+    to {
+        left: 100%;
+        /* Slide out to the left */
     }
 }
 
@@ -411,6 +599,10 @@ footer {
         top: 200px;
         margin-right: -360px;
     }
+
+    .contact-grid {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width: 710px) {
@@ -433,6 +625,75 @@ footer {
         top: 200px;
         margin-right: -330px;
     }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        width: 70%;
+    }
+
+    .contact-img2 {
+        margin-bottom: 20px;
+    }
+
+    .contact-img {
+        border-radius: 50px 50px 0 0;
+    }
+
+
+    .contact-message {
+        border-radius: 0 0 50px 50px;
+    }
+
+    .navs {
+        display: none;
+
+    }
+
+    .mylogo {
+
+        margin: 0 20px;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+
+    .mobile-nav {
+        width: 100%;
+        opacity: 90%;
+    }
+
+    .burgernav {
+        display: flex;
+        position: absolute;
+        scale: 1.5;
+        right: 3%;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 0;
+    }
+
+    .burgernav i {
+        display: flex;
+        position: absolute;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        border-radius: 20px 0 0 20px;
+        transition: .3s;
+        margin-right: 20px;
+        padding: 16px;
+    }
+
+    .burgernav :hover {
+        background-color: rgb(143, 143, 143);
+        color: rgb(66, 66, 66);
+    }
+
+
 }
 
 @media screen and (max-width: 645px) {
@@ -455,6 +716,7 @@ footer {
         top: 200px;
         margin-right: -310px;
     }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -646,5 +908,5 @@ footer {
     .unity {
         margin-right: -30px;
     }
-    
+
 }

@@ -19,7 +19,7 @@ homeLink.addEventListener("click", function (event) {
 const eduLink = document.getElementById("edu-link");
 const educationDiv = document.getElementById("education");
 
-// Add a click event listener to the "Home" link
+// Add a click event listener to the "Education" link
 eduLink.addEventListener("click", function (event) {
     event.preventDefault(); // Prevent the default link behavior
 
@@ -29,6 +29,40 @@ eduLink.addEventListener("click", function (event) {
     // Scroll to the top of the profile section with an offset
     window.scrollTo({
         top: educationDiv.offsetTop - headerOffset,
+        behavior: 'smooth'
+    });
+});
+
+const expLink = document.getElementById("exp-link");
+const experienceDiv = document.getElementById("experience");
+
+// Add a click event listener to the "Experience" link
+expLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Get the offset of the header
+    const headerOffset = document.querySelector("header").offsetHeight;
+
+    // Scroll to the top of the profile section with an offset
+    window.scrollTo({
+        top: experienceDiv.offsetTop - headerOffset,
+        behavior: 'smooth'
+    });
+});
+
+const contactLink = document.getElementById("contact-link");
+const contactDiv = document.getElementById("contact");
+
+// Add a click event listener to the "Contact" link
+contactLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+
+    // Get the offset of the header
+    const headerOffset = document.querySelector("header").offsetHeight;
+
+    // Scroll to the top of the profile section with an offset
+    window.scrollTo({
+        top: contactDiv.offsetTop - headerOffset,
         behavior: 'smooth'
     });
 });
@@ -111,3 +145,52 @@ rightbtn.addEventListener("click", function () {
         cd3.style.display = "none";
     }
 });
+
+//navigation bar
+function toggleMobileNav() {
+    var mobileNav = document.getElementById("mobileNav");
+    if (mobileNav.classList.contains("open")) {
+        mobileNav.classList.remove("open");
+        mobileNav.classList.add("close");
+        setTimeout(function () {
+            mobileNav.style.display = "none"; // Hide after animation completes
+        }, 300); // Adjust the timeout to match your animation duration
+    } else {
+        mobileNav.style.display = "flex"; // Show before animation starts
+        mobileNav.classList.remove("close");
+        mobileNav.classList.add("open");
+    }
+}
+
+const submit = document.getElementById("submit");
+
+submit.addEventListener("click", function () {
+    var emailTextarea = document.querySelector(".email");
+    var messageTextarea = document.querySelector(".message");
+
+    var email = emailTextarea.value.trim();
+    var message = messageTextarea.value.trim();
+
+    // Check if email and message are not empty
+    if (email === "" || message === "") {
+        alert("Please fill out both the email and message fields.");
+        return;
+    }
+
+    Email.send({
+        SecureToken: "6c63988e-67a3-44b4-9719-789cfd34ba33",
+        To: "jantagle99@yahoo.com",
+        From: "janmenard0724@gmail.com",
+        Subject: email + " - MenardDev - Inquiry",
+        Body: message
+    }).then(function (message) {
+        if (message === "OK") {
+            console.log("Message sent successfully");
+            alert("Message sent successfully.");
+            emailTextarea.value = "";
+            messageTextarea.value = "";
+        } else {
+            console.error("Message sending failed:", message);
+        }
+    });
+})

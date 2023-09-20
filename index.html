@@ -13,11 +13,21 @@
     <header>
         <nav>
             <ul>
-                <a href="#profile" id="home-link">Home</a>
-                <a href="#education" id="edu-link">Education</a>
-                <a href="#experience">Experience</a>
-                <a href="">Contact</a>
+                <div class="mylogo"><a href="#" class="mylogo2">MenardDev</a></div>
+                <div class="navs">
+                    <a href="#profile" id="home-link">Home</a>
+                    <a href="#education" id="edu-link">Education</a>
+                    <a href="#experience" id="exp-link">Experience</a>
+                    <a href="#contact" id="contact-link">Contact</a>
+                </div>
+                <a class="burgernav" onclick="toggleMobileNav()"> <i class="fa fa-bars"></i></a>
             </ul>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#profile" id="home-link" onclick="toggleMobileNav()">Home</a>
+                <a href="#education" id="edu-link" onclick="toggleMobileNav()">Education</a>
+                <a href="#experience" id="exp-link" onclick="toggleMobileNav()">Experience</a>
+                <a href="#contact" id="contact-link" onclick="toggleMobileNav()">Contact</a>
+            </div>
         </nav>
     </header>
     <div>
@@ -25,9 +35,9 @@
             <img class="profilepic1" src="img/IMG_1785.JPG" alt="">
             <div class="profile-info">
                 <h1 class="header">Hello! I'm Jan Menard</h1>
-                <p class="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla atque temporibus dolorum
-                    quam voluptatem? Possimus iste hic impedit pariatur quisquam consequatur sint amet id eos harum
-                    neque animi, reprehenderit vel.</p>
+                <p class="par">I'm passionate about crafting digital experiences. From front-end finesse to back-end
+                    wizardry, I'm on a journey to create seamless solutions. Explore my work and let's connect to build
+                    something great together!</p>
             </div>
             <img class="profilepic" src="img/IMG_1785.JPG" alt="">
         </div>
@@ -39,18 +49,20 @@
                 <div class="edu">
                     <h1 class="edu-h1">Senior HS</h1>
                     <h2 class="edu-h2">La Vlaize Integrated Science School</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo earum ab nisi possimus
-                        officiis
-                        vitae adipisci. Pariatur, libero ab voluptatem odit exercitationem enim eius consequuntur fugiat
-                        temporibus, nemo molestias error.</p>
+                    <h2 class="edu-h2">(2017 - 2019)</h2>
+                    <p> I pursued the Information and Communications Technology (ICT) - Technical Vocational Livelihood
+                        (TVL) track. This educational journey ignited my passion for technology, providing me with a
+                        strong foundation in areas such as programming, multimedia, and computer systems.</p>
                 </div>
                 <div class="edu">
                     <h1 class="edu-h1">College</h1>
                     <h2 class="edu-h2">Cavite State University - Naic Campus</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum et facilis iusto odit fuga, libero
-                        quo
-                        neque accusantium delectus rerum iste doloribus at aperiam, voluptates voluptate laudantium cum?
-                        Esse, voluptas!</p>
+                    <h2 class="edu-h2">(2020 - Present)</h2>
+                    <p> I am currently a 4th year student pursuing my Bachelor of Science in Information Technology.
+                        This academic journey has allowed me to deepen my knowledge and skills
+                        in the field of technology. From coding and software development to data management and network
+                        administration, I am dedicated to honing my expertise and preparing myself for a successful
+                        career as a full-stack developer.</p>
                 </div>
             </div>
         </div>
@@ -58,40 +70,40 @@
             <div class="exp-container">
                 <div class="exp-element">
                     <h1 class="exp-h1">My Experience</h1>
-                    <p class="exp-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere deleniti
-                        consequuntur nihil
-                        deserunt
-                        ullam quidem! Perspiciatis ipsa magnam hic in, ad at nostrum perferendis nobis, ut et aliquam
-                        porro
-                        accusamus.</p>
+                    <p class="exp-p">Throughout my journey in both senior high school and college, I've dedicated myself
+                        to progressively accumulating knowledge and experience in the dynamic realm of information
+                        technology.</p>
                 </div>
                 <div class="exp-cards">
                     <div id="cards" class="card1">
                         <img class="htmlcssjs" src="img/htmlcssjs.png" alt="">
-                        <p class="card1-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ea odio,
-                            consectetur qui
-                            maiores atque nihil similique repudiandae assumenda laudantium, veritatis esse error
-                            dignissimos sunt quisquam asperiores aperiam harum ipsum.</p>
+                        <p class="card1-p">Throughout my educational journey and personal projects, I've had the
+                            privilege of gaining valuable experience with HTML, CSS, and JavaScript, the fundamental
+                            building blocks of the web.</p>
                     </div>
                     <div id="cards" class="card2" style="display: none;">
                         <div class="java">
                             <img class="javas" src="img/java.png" alt="">
                             <img class="netbeans" src="img/netbeans.png" alt="">
                         </div>
-                        <p class="card2-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, delectus.
-                            Commodi id sint
-                            debitis! Repudiandae cumque optio labore facere ipsam mollitia similique, magni nulla,
-                            consequatur laborum, eum ut cum commodi?</p>
+                        <p class="card2-p">Java has been the primary programming language throughout my university
+                            journey, and I've embraced its versatility and power to develop robust and efficient
+                            software solutions. I've honed my Java skills by tackling a wide range of projects, from
+                            console applications to
+                            complex software systems. I am well-versed in object-oriented programming (OOP) principles,
+                            design patterns, and data structures, allowing me to write clean, maintainable, and scalable
+                            code.</p>
                     </div>
                     <div id="cards" class="card3" style="display: none;">
                         <div class="csharp">
                             <img class="csharps" src="img/csharp.png" alt="">
                             <img class="unity" src="img/Unity.png" alt="">
                         </div>
-                        <p class="card3-p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, delectus.
-                            Commodi id sint
-                            debitis! Repudiandae cumque optio labore facere ipsam mollitia similique, magni nulla,
-                            consequatur laborum, eum ut cum commodi?</p>
+                        <p class="card3-p">I've honed my skills in C#, a versatile programming language, to create
+                            logic-rich and efficient code. Whether it's managing game states, handling input, or
+                            implementing complex algorithms, I've used C# to build the backbone of my Unity Capstone
+                            Project.
+                        </p>
                     </div>
                     <button id="btnl"><i class='fas fa-angle-left'></i></button>
                     <button id="btnr"><i class='fas fa-angle-right'></i></button>
@@ -100,14 +112,47 @@
         </div>
 
         <div id="contact">
-            Contact
+            <div class="contact-header">
+                <h1 class="contact-h1">Contact</h1>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-img">
+                    <div class="contact-img-p">
+                        <p> If you'd like to get in touch or discuss potential opportunities, please feel free to reach
+                            out using the contact form below. I'm looking forward to hearing from you!</p>
+                        <p>Additionally, you can connect with me on various social media platforms by clicking on the
+                            icons below:</p>
+                    </div>
+                    <div class="contact-img2">
+                        <a href="https://web.facebook.com/Jan.Thuglife.24/"><i
+                                class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/jan_tagsss/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/jantagle"><i class="fa-brands fa-square-github"></i></a>
+                    </div>
+                </div>
+                <div class="contact-message">
+                    <div class="contact-message-container">
+                        <br>
+                        <label for="">Email</label>
+                        <br>
+                        <textarea class="email" type="email" placeholder="Ex.abcd@gmail.com"></textarea>
+                        <br>
+                        <label for="">Message</label>
+                        <br>
+                        <textarea class="message" type="text" placeholder="Write something..."></textarea>
+                        <br>
+                        <button id="submit">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
-        <p>Company © W3docs. All rights reserved.</p>
+        <p>Copyright © 2023 MenardDev. All Rights Reserved</p>
     </footer>
-    <script src="javascript.js">
-    </script>
+    <script src="javascript.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </body>
+
 
 </html>
