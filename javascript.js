@@ -167,14 +167,26 @@ const submit = document.getElementById("submit");
 submit.addEventListener("click", function () {
     var emailTextarea = document.querySelector(".email");
     var messageTextarea = document.querySelector(".message");
+    const emailError = document.getElementById("emailError");
+    const messageError = document.getElementById("messageError");
 
     var email = emailTextarea.value.trim();
     var message = messageTextarea.value.trim();
 
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     // Check if email and message are not empty
-    if (email === "" || message === "") {
-        alert("Please fill out both the email and message fields.");
+    if (email === "" || !email.match(emailPattern)) {
+        emailError.textContent = "Please enter a valid email address.";
         return;
+    } else {
+        emailError.textContent = "";
+    }
+
+    if (message === "") {
+        messageError.textContent = "Please enter a message.";
+        return;
+    } else {
+        messageError.textContent = "";
     }
 
     Email.send({

@@ -354,7 +354,7 @@ nav a {
     margin: 0 15px;
 }
 
-.card2-p{
+.card2-p {
     margin-top: 80px;
 }
 
@@ -456,25 +456,27 @@ nav a {
 
 }
 
-.email {
-    display: flex;
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-    margin: auto;
-}
-
+.email,
 .message {
     display: flex;
     width: 90%;
-    height: 300px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
     margin: auto;
+    font-size: 15px;
+}
+
+.message {
+    height: 300px;
+}
+
+#emailError,
+#messageError {
+    color: red;
+    margin-left: 20px;
+    font-size: 13px;
 }
 
 #submit {
