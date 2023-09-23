@@ -150,7 +150,6 @@ nav a {
     display: none;
     max-width: 20%;
     border-radius: 50%;
-    margin-left: 20px;
     border: 1px solid rgb(231, 231, 231);
     box-shadow: 2px 3px 8px rgb(235, 235, 235);
     transition: 0.3s;
