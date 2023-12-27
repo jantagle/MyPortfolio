@@ -365,7 +365,7 @@ nav a {
     height: 40px;
     top: 170px;
     margin-left: -420px;
-
+    cursor: pointer;
 }
 
 #btnr {
@@ -375,6 +375,7 @@ nav a {
     height: 40px;
     top: 170px;
     margin-right: -420px;
+    cursor: pointer;
 }
 
 #contact {
